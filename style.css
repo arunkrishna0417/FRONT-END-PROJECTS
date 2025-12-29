@@ -1,0 +1,125 @@
+:root{
+    --primary-dark:#452829;
+    --secondary-dark:#57595b;
+    --secondary-light:#e8d1c5;
+    --primary-light:#ffff;
+}
+@font-face {
+    font-family: ;
+    src: url();
+}
+*{
+    margin: 0;
+}
+main{
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+nav{
+    /* background-color: aqua; */
+    width: 50px;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    right: 4%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* z-index:100; */
+}
+nav a>img{
+    width: 100%;
+}
+nav a{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+nav a sapn{
+    /* display: none; */
+    opacity: 0;
+    position: relative;
+    left: 50px;
+    z-index: -1;
+}
+nav img:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.2);
+}
+nav a:hover span {
+    /* display: block; */
+    animation: all 0.8s ease-in-out forwards;
+}
+@keyframes drag{
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+main>.container{
+    min-height: 100vh;
+    width: 100%;
+}
+/* Home */
+main>.home{
+    background-color: rgba(64, 224, 208, 0.637);
+    display: grid;
+}
+img{
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.home>text{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    .primary-para{
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        font-size: 2.4rem;
+        }
+        h1{
+            font-size: 6rem;
+
+        }
+        .tag-line{
+            font-size: 1.2rem;
+        }
+}
+/* about */
+main>.about{
+    background-color: rgb(255, 219, 39);
+}
+/* services */
+main>.service{
+    background-color: violet;
+}
+/* project */
+main>.project{
+    background-color: steelblue;
+}
+/* contact */
+main>.contact{
+    background-color:lawngreen;
+}
